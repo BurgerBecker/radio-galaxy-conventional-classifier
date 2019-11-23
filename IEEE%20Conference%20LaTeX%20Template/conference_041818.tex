@@ -33,8 +33,8 @@ tlgrobler@sun.ac.za}
 \maketitle
 
 \begin{abstract}
-Large scale radio astronomy projects such as the Square Kilometre Array (SKA) is expected to produce extremely large data sets (300 PB p/a), which makes purely manual classification no longer a viable option. An automatic method of radio galaxy classification is proposed in this paper that will examine the performance of conventional classification approaches to determine whether accurate classification can be done on subjective features. We define a subjective features as a characteristic of the data that is not dependent on an objective or self-contained measure.
-This method is meant to act as a tool for domain experts or as an auxiliary function for deep learning classifiers. The morphological features extracted are lobe size, hot spot/peak brightness, the number of lobes present and the Fanaroff-Riley (FR) ratio, with the latter two viewed as objective features and the rest subjective features. To determine the relevance of the morphological features as indicators of class differences, the features are then used in several machine learning classifiers, of which the study compares the classification accuracy and F1-score. Overall, the Random Forest classifier produces the highest accuracy (94.66\%) and F1-score (0.94) using all the features in conjunction. The relevance of the Fanaroff-Riley ratio as a classification metric is verified. Further investigation in automatic extraction of the ratio is required.
+Large scale radio astronomy projects such as the Square Kilometre Array (SKA) is expected to produce extremely large data sets (300 PB p/a), which makes purely manual classification no longer a viable option. An automatic method of radio galaxy classification is proposed in this paper that will examine the performance of conventional classification approaches to determine whether accurate classification can be done on subjective features.
+This method is meant to act as a tool for domain experts or as an auxiliary function for deep learning classifiers. The morphological features extracted are lobe size, hot spot/peak brightness, the number of lobes present and the Fanaroff-Riley (FR) ratio. To determine the relevance of the morphological features as indicators of class differences, the features are then used in several machine learning classifiers, of which the study compares the classification accuracy and F1-score. Overall, the Random Forest classifier produces the highest accuracy (94.66\%) and F1-score (0.94) using all the features in conjunction. The relevance of the Fanaroff-Riley ratio as a classification metric is verified. Further investigation in automatic extraction of the ratio is required.
 % An automatic method of radio galaxy classification is proposed in this paper, which uses a conventional feature extraction based approach combining computer vision techniques and machine learning to differentiate between Fanaroff-Riley type I and II radio galaxies. 
 
 \end{abstract}
@@ -44,11 +44,11 @@ Machine Learning, Radio Astronomy, Computer Vision
 \end{IEEEkeywords}
 
 \section{Introduction}
-The latest radio surveys are expected to provide a deluge of data, for example the Square Kilometer Array (SKA) radio telescope in South Africa is expected to produce nearly 300 PB of data per year \cite{jonas_2018} and the Australia SKA Pathfinder's Evolutionary Map of the Universe has an anticipated output of around $\sim70$ million, sources of which around 7 million might require visual inspection \cite{askap_2008} \cite{emu_2011}. This implies that  manual classification by experts will no longer be a viable solution \cite{hocking_2015}.
+The latest radio surveys are expected to provide a deluge of data, for example the Square Kilometer Array (SKA) radio telescope in South Africa is expected to produce nearly 300 PB of data per year \cite{jonas_2018} and the Australian SKA Pathfinder's Evolutionary Map of the Universe has an anticipated output of around $\sim70$ million, sources of which around 7 million might require visual inspection \cite{askap_2008} \cite{emu_2011}. The implication being that  manual classification by experts will no longer be a viable solution \cite{hocking_2015}, although large scale citizen science projects might be a viable alternative.
 
-Methods that provide automated classification is one potential solution, given the recent advances in the field of image recognition and processing. Some examples of automated radio galaxy classifiers that have been developed include: Toothless \cite{aniyan_thorat_2017}, FirstClass \cite{alhassan_2018}, CLARAN \cite{wu_2019} and a comparison between CNN's and Capsule Networks \cite{lukic_2019}, most of which use Convolutional Neural Networks (CNN).
+Methods that provide automated classification is another potential solution, given the recent advances in the field of image recognition and processing. Some examples of automated radio galaxy classifiers that have been developed include: Toothless \cite{aniyan_thorat_2017}, FirstClass \cite{alhassan_2018}, CLARAN \cite{wu_2019} and a comparison between CNN's and Capsule Networks \cite{lukic_2019}, most of which use Convolutional Neural Networks (CNN).
 
-CNN's perform on par with humans at image classification tasks that have a complex feature space, which is difficult to express and model mathematically (such as explicitly modeling the difference between a cat and a dog). 
+CNN's perform on par with humans at image classification tasks that have a complex feature space, which is difficult to express and model mathematically (such as explicitly modeling the visual differences between a cat and a dog). 
 
 
 \begin{figure}[h]
@@ -60,30 +60,14 @@ CNN's perform on par with humans at image classification tasks that have a compl
 
 A requirement for CNN's is a large amount of training samples, in the range of 10 000 images. Given the relative geometric simplicity of the classification problem and that the current datasets contain in the order of only $\sim1000$ unique sources, CNN's might not be the most appropriate solution. 
 Most of the existing systems solve the problem posed by the lack of data by augmenting the existing datasets with rotation and translation of radio sources. This does accentuate the risk of over-fitting by learning features that do not represent general morphological characteristics of a class, but rather that are preeminent within the sample.
-% In theory, CNN's are meant to be at least partially rotation and translation invariant.
 
-
-A major drawback is that we do not know the features being used by CNN's after training. There are several methods of analysing these systems, such as filter visualization \cite{aniyan_thorat_2017}. Rather than analysing these systems directly, we propose a method to test if an augmented dataset contains potential subjectivity. These ``subjective'' features can be described as characteristics of the data that is not an objective measure that is independent of other factors. For example, the radio telescopes's resolution has an effect on the area in the representation of the source. This is elaborated on in the results section.
+A major drawback of CNN's is that we do not know the features being used for classification. There are several methods of analysing these systems, such as filter visualization \cite{aniyan_thorat_2017}. Rather than analysing these systems directly, we propose a method to test if an augmented dataset contains potential subjectivity. An ``objective'' feature can be described as a characteristic of the data that is a consistent quantifiable metric which is independent of other factors. For example, the radio telescopes's resolution has an effect on the area in the visual representation of the source. Area in this case is quantifiable in pixels but radio telescope's with different resolutions will result in an inconsistent value. This is expanded on in the results section.
 
 The Fanaroff-Riley (FR) classification scheme provides an objective feature in the form of the FR-ratio \cite{fanaroff_riley_1974}. Within this scheme, extra-galactic radio sources were originally divided into two classes, namely FR type I and type II. Type I and type II sources are describes as being edge brightened and lobe brightened, respectively. Because the ratio is not dependent on external features and is a self-contained metric, it acts as an example of an objective feature.
 
-By contrast, conventional Machine Learning methods require relatively few samples, compared to Deep Learning and have not been examined in much depth in this field. This paper will examine the performance of conventional classification systems to determine whether accurate classification can be done on subjective features.
+In contrast to CNN's, most conventional Machine Learning methods require relatively few samples (such as Random Forest), compared to Deep Learning and have not been examined in much depth for radio source classification. This paper will examine the performance of conventional classification systems to determine whether accurate classification can be done on subjective features.
 
-% In the case of radio astronomy, this would be the Fanaroff-Riley morphological 
-% classification scheme \cite{fanaroff_riley_1974}. 
-
-% Extra-galactic radio sources were originally divided into two classes, namely Fanaroff-Riley (FR) type I and type II. These sources are described as being edge brightened and lobe brightened, respectively. Originally, they were described by Fanaroff and Riley in their seminal paper on extra-galactic source classification based on morphological features \cite{fanaroff_riley_1974}. The classification scheme is based on the ratio of the distance between the hotspots and the total length of the object, with all sources greater than 0.5 being classified as FRII and all less as FRI. This can be seen as illustrated by figure with A being the distance between hotspots and B the total length of the source up to the furthest contour edges. 
-
-
-
-
-
-% The main problem with the FR dichotomy is the
-% morphological feature space used during classification. Even though one of the 
-% official features in the literature seems to be the FR ratio, very few astronomers 
-% and astrophysicist use this as the main morphological feature.\footnote{Vaccari, M, Inter-University Institute for Data Intensive Astronomy, and Department of Physics and Astronomy, University of the Western Cape
-% , Private Bag X17, Bellville 7535, South Africa, Private Communication}
-In practice, the FR-ratio is but one of a host of features being used during manual classification. Within the literature there is no 
+In practice, the FR-ratio is but one of a host of features being used during manual classification by experts. Within the literature there is no 
 clearly defined set of visual features for FR classification. Rather it seems that
 becoming proficient at classification is more dependant on a mix between domain 
 specific knowledge, experience classifying the data and an intuitive grasp of the class differences. 
@@ -91,6 +75,14 @@ specific knowledge, experience classifying the data and an intuitive grasp of th
 The focus of this paper is to examine the role the FR ratio plays in 
 classification, to clarify the additional morphological features which are subjective or objective, and to attempt to set up classifiers based on those features examined. 
 These tools can then be used in tandem with the experts to ease and speed up classification.
+
+In summary, we will investigate:
+
+\begin{itemize}
+\item if conventional Machine Learning morphological features can be used to classify radio galaxies
+\item present an approach which can detect if small radio galaxy datasets contain subjective morphological features that add to class seperability. This may lead to the CNN being biased in a specific way by the subjectivity inherent in the dataset.
+\item examine whether the FR-ratio is still a relevant feature for radio galaxy classification 
+\end{itemize}
 
 
 

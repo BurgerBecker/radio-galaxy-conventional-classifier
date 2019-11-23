@@ -1,11 +1,22 @@
 import numpy as np
 import cv2 as cv
-import pyfits as pf
+# No longer using pyfits, since it has been deprecated
+# import pyfits as pf
+from astropy.io import fits
+import matplotlib.pyplot as plt
+
 
 def read_fits(name):
-    fh = pf.open(name)
+    fh = fits.open(name)
     image = fh[0].data
     return image
+
+def plot_larger(image,x=12,y=12,cmap='gist_stern'):
+    """Give the image and size of the figure as well as the colour map, otherwise defaults are used."""
+    plt.figure(figsize=(x,y))
+    # Setting the colour map to gist_stern, the default one is jet, I prefer this one
+    plt.set_cmap(cmap)
+    plt.imshow(image)
 
 def preprocess(image, sig):
     image2 = image.copy()

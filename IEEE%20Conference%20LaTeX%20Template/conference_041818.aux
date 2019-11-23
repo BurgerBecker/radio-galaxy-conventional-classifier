@@ -1,0 +1,105 @@
+\relax 
+\citation{jonas_2018}
+\citation{askap_2008}
+\citation{emu_2011}
+\citation{hocking_2015}
+\citation{aniyan_thorat_2017}
+\citation{alhassan_2018}
+\citation{wu_2019}
+\citation{lukic_2019}
+\citation{kharb2015}
+\citation{kharb2015}
+\citation{aniyan_thorat_2017}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The FRI galaxy 3C 449 (left) and the FRII galaxy 3C 98 (right) illustrate the FR morphology. The red area indicates the brightest radio emission. For the FRII's the edges are much brighter in radio emissions, while the FRI's have the hotspots close to the lobes. Reproduced from Extragalactic jets from every angle, Proceedings of the International Astronomical Union, IAU Symposium, Volume 313, pp. 211-218 with permission \cite  {kharb2015}}}{1}}
+\newlabel{fig:kharb}{{1}{1}}
+\citation{fanaroff_riley_1974}
+\citation{wierzbowska_2011}
+\citation{lin_2010}
+\citation{owen_laing_1989}
+\citation{gendre_wall_2009}
+\citation{lukic2018}
+\citation{gopalkrishna2000}
+\citation{feigelson}
+\citation{hinton_2012}
+\citation{aniyan_thorat_2017}
+\citation{aniyan_thorat_2017}
+\citation{capetti_2016}
+\citation{gendre_wall_2009}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Literature Review}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-A}}Radio Astronomy Background}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces A diagram of the Fanaroff-Riley ratio. The ratio is defined as the inter-lobe hotspot distance (B) divided by the total source length (A)}}{2}}
+\newlabel{fig:becker2019}{{2}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-B}}New Classes: Beyond FRI and FRII}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-C}}Machine Learning}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Methodology}{2}}
+\citation{scipy}
+\citation{macqueen1967}
+\citation{scikit-learn}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Dataset Description}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Image Processing}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}Image Segmentation}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-D}}Manual Ratio Extraction Tool}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-E}}Manual Calculation of FR-Ratio}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-F}}Automatic Ratio Extraction}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Image Preprocessing Pipeline}}{4}}
+\newlabel{fig:imagepipeline}{{3}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-G}}Feature Description}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Automatic hotspot detection: 1. Finding the hotspots, 2. Finding the furthest contour edges, 3. The calculated ratio}}{4}}
+\newlabel{fig:hotspotsss}{{4}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-H}}Feature Extraction}{4}}
+\citation{scikit-learn}
+\citation{lin_2010}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Experiments and Results}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Baseline Classifier on Raw Images}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Classifier Testing with Ratio as a Feature}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Evaluating the Ratio as a Feature}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Manual ratio calculation}}{5}}
+\newlabel{fig:ratio_plot}{{5}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-D}}Best Performing Classifier Setup}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Variable importance as given by Random Forest GINI index on the Manual Ratio Extraction Dataset}}{5}}
+\newlabel{fig:gini}{{6}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-E}}Automatic Extracted Feature Results}{5}}
+\citation{aniyan_thorat_2017}
+\citation{aniyan_thorat_2017}
+\citation{aniyan_thorat_2017}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Table of Most Accurate Classifiers by Features Used}}{6}}
+\newlabel{tab:freq}{{I}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Non-nested cross validation vs Nested cross validation on the Best Estimator Result on the Manual Ratio Extraction Dataset}}{6}}
+\newlabel{fig:nested}{{7}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-F}}Comparison with Deep Learning}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Variable importance as given by Random Forest GINI index on the fully Automatic Extracted Dataset}}{6}}
+\newlabel{fig:agnfeat}{{8}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Nested cross validation on the Best Estimator Result on the fully Automatic Extracted Dataset}}{6}}
+\newlabel{fig:nested2}{{9}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces A pairwise plot of the four features in conjunction with manual ratio that have been selected}}{7}}
+\newlabel{fig:pairwise}{{10}{7}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Result comparison with CNN trained on the same data}}{7}}
+\newlabel{tab:results}{{II}{7}}
+\bibstyle{bibliography/IEEEtran}
+\bibdata{bibliography/IEEEabrv,bibliography/IEEEexample}
+\bibcite{jonas_2018}{1}
+\bibcite{askap_2008}{2}
+\bibcite{emu_2011}{3}
+\bibcite{hocking_2015}{4}
+\bibcite{aniyan_thorat_2017}{5}
+\bibcite{alhassan_2018}{6}
+\bibcite{wu_2019}{7}
+\bibcite{lukic_2019}{8}
+\bibcite{kharb2015}{9}
+\bibcite{fanaroff_riley_1974}{10}
+\bibcite{wierzbowska_2011}{11}
+\bibcite{lin_2010}{12}
+\bibcite{owen_laing_1989}{13}
+\bibcite{gendre_wall_2009}{14}
+\bibcite{lukic2018}{15}
+\bibcite{gopalkrishna2000}{16}
+\bibcite{feigelson}{17}
+\bibcite{hinton_2012}{18}
+\bibcite{capetti_2016}{19}
+\bibcite{scipy}{20}
+\bibcite{macqueen1967}{21}
+\bibcite{scikit-learn}{22}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Future Work}{8}}
+\@writefile{toc}{\contentsline {section}{References}{8}}

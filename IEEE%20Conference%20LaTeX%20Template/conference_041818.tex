@@ -34,8 +34,7 @@ tlgrobler@sun.ac.za}
 
 \begin{abstract}
 Large scale radio astronomy projects such as the Square Kilometre Array (SKA) is expected to produce extremely large data sets (300 PB p/a), which makes purely manual classification no longer a viable option. An automatic method of radio galaxy classification is proposed in this paper that will examine the performance of conventional classification approaches to determine whether accurate classification can be done on subjective features.
-This method is meant to act as a tool for domain experts or as an auxiliary function for deep learning classifiers. The morphological features extracted are lobe size, hot spot/peak brightness, the number of lobes present and the Fanaroff-Riley (FR) ratio. To determine the relevance of the morphological features as indicators of class differences, the features are then used in several machine learning classifiers, of which the study compares the classification accuracy and F1-score. Overall, the Random Forest classifier produces the highest accuracy (94.66\%) and F1-score (0.94) using all the features in conjunction. The relevance of the Fanaroff-Riley ratio as a classification metric is verified. Further investigation in automatic extraction of the ratio is required.
-% An automatic method of radio galaxy classification is proposed in this paper, which uses a conventional feature extraction based approach combining computer vision techniques and machine learning to differentiate between Fanaroff-Riley type I and II radio galaxies. 
+This method is meant to act as a tool for domain experts or as an auxiliary function for deep learning classifiers. The morphological features extracted are lobe size, hot spot/peak brightness, the number of lobes present and the Fanaroff-Riley (FR) ratio. To determine the relevance of the morphological features as indicators of class differences, the features are then used in several machine learning classifiers, of which the study compares the classification accuracy and F1-score. Overall, the Random Forest classifier produces the highest accuracy (94.66\%) and F1-score (0.94) using all the features in conjunction. The relevance of the Fanaroff-Riley ratio as a classification metric is verified. Further investigation in automatic extraction of the ratio is required. 
 
 \end{abstract}
 
@@ -65,107 +64,55 @@ A major drawback of CNN's is that we do not know the features being used for cla
 
 The Fanaroff-Riley (FR) classification scheme provides an objective feature in the form of the FR-ratio \cite{fanaroff_riley_1974}. Within this scheme, extra-galactic radio sources were originally divided into two classes, namely FR type I and type II. Type I and type II sources are describes as being edge brightened and lobe brightened, respectively. Because the ratio is not dependent on external features and is a self-contained metric, it acts as an example of an objective feature.
 
-In contrast to CNN's, most conventional Machine Learning methods require relatively few samples (such as Random Forest), compared to Deep Learning and have not been examined in much depth for radio source classification. This paper will examine the performance of conventional classification systems to determine whether accurate classification can be done on subjective features.
-
-In practice, the FR-ratio is but one of a host of features being used during manual classification by experts. Within the literature there is no 
+In practice, the FR-ratio is but one of a host of implicit features being used during manual classification by experts. Within the literature there is no 
 clearly defined set of visual features for FR classification. Rather it seems that
 becoming proficient at classification is more dependant on a mix between domain 
 specific knowledge, experience classifying the data and an intuitive grasp of the class differences. 
 
-The focus of this paper is to examine the role the FR ratio plays in 
-classification, to clarify the additional morphological features which are subjective or objective, and to attempt to set up classifiers based on those features examined. 
-These tools can then be used in tandem with the experts to ease and speed up classification.
+Most conventional Machine Learning methods required extracted and quantifiable features (in contrast to CNN's). To address this, we construct and extract morphological features from the images, namely the source area, brightest pixel intensity, number of seperable lobes and the FR-ratio. These methods have not been examined in depth for radio source classification.
 
 In summary, we will investigate:
 
 \begin{itemize}
-\item if conventional Machine Learning morphological features can be used to classify radio galaxies
-\item present an approach which can detect if small radio galaxy datasets contain subjective morphological features that add to class seperability. This may lead to the CNN being biased in a specific way by the subjectivity inherent in the dataset.
-\item examine whether the FR-ratio is still a relevant feature for radio galaxy classification 
+\item if conventional Machine Learning classifiers using extracted morphological features can be used to classify radio galaxies at a similar accuracy to Deep Learning methods.
+\item an approach which can detect if small radio galaxy datasets contain subjective morphological features that add to class seperability. These features may in turn be ``learned'' by CNN's or other unsupervised methods, potentially leading to a biased classifier. This might then also be extened to a method of assessing the quality of our augmentation algorithm.
+\item whether the FR-ratio is still a relevant feature for radio galaxy morphological classification.
 \end{itemize}
-
-
 
 \section{Literature Review}
 
 \subsection{Radio Astronomy Background}
 
-Radio galaxies are active galaxies that are strong emitters of
-radio waves powered by accretion onto a super massive black hole that produce extended structures called radio jets and lobes \cite{wierzbowska_2011}. The FR-ratio is defined as the distance between the regions of highest brightness (hotspots) on opposite sides of the active galactic nucleus (AGN) and the distance between the farthest edges of the lobes. Sources where the ratio is less than 0.5, are classified as FRI and all sources greater than 0.5 is placed in FRII (fig.\ref{fig:becker2019}). 
+A radio galaxy is a type of active galaxy with strong emission of
+radio waves powered by accretion of matter onto a super massive black hole that produces extended structures called radio jets and lobes \cite{wierzbowska_2011}. The FR-ratio is defined as the distance between the regions of highest brightness (hotspots) on opposite sides of the active galactic nucleus (AGN) and the distance between the farthest edges of the lobes \cite{fanaroff_riley_1974}. Sources where the ratio is less than 0.5, are classified as FRI and all sources greater than 0.5 is placed in FRII (fig.\ref{fig:becker2019}). 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{EPS/ratio_becker.eps}
     \caption{A diagram of the Fanaroff-Riley ratio. The ratio is defined as the inter-lobe hotspot distance (B) divided by the total source length (A)}
     \label{fig:becker2019}
 \end{figure}
-% Another, more concrete definition that has been given is by Owen and Ledlow \cite{owen_1994} based upon the relationship between optical luminosity and radio luminosity. Examining a classification system based on optical features is outside of the scope of this project and would require optical catalogues being correlated with radio catalogues.
-
-
-
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=0.5\textwidth]{Owen_ledlow94.png}
-%     \caption{FRI as 1 and FRII as 2 (Owen \& Ledlow, 1994)}
-%     \label{fig:owen1994}
-% \end{figure}
-
 
 
 Alternative classification schemes have been proposed with the ratio at 0.8, based on catalogues with better resolution than the Third Cambridge Catalogue of Radio Sources that was used by Fanaroff and Riley. 
-The study by Lin et al. \cite{lin_2010} proposed a ratio $r = S/T$, with $T$ being the total length of the radio source and $S$ being the distance between highest surface brightness spots on either side of the AGN. The conclusion of that study was that such a ratio had limited application in classification of radio galaxies, due to overlap in physical properties of the two different groups that leads to a smooth transition between FRI and FRII classes rather than a sharp class distinction. This study used no other morphological features for classification.
-% All the ratios calculated in these studies have been done by hand, but no large scale computer vision and machine learning study has been performed that rigorously and statistically verifies the accuracy of the ratio as a useful morphological feature. Lin et al. \cite{lin_2010} also proposes ``to define an 
-% objective measure (or measures) that allows us to trace the galaxy population 
-% smoothly from FR type-I-like sources to type-II-like ones (as opposed to a sharp 
-% and perhaps arbitrary type I versus type II division). With the aid of such a 
-% measure, we hope to reduce the subjectiveness inherited in the traditional ways of
-% classification, thus increasing the repeatability of our results by other 
-% researchers''.
+The study by Lin et al. \cite{lin_2010} proposed a ratio $r = S/T$, with $T$ being the total length of the radio source and $S$ being the distance between highest surface brightness spots on either side of the AGN. The conclusion of that study was that such a ratio had limited application in classification of radio galaxies, due to overlap in physical properties of the two different groups that leads to a smooth transition between FRI and FRII classes rather than a sharp class distinction.
 
-% While their study has provided ground work for such a scheme and laid out several measures to perform classification, no uniform tool-set has been developed for this
-% purpose and their own methodology has similar issues to previous schemas: a lack of an objective measure and subjective qualities inherited due to the lack of well defined features that they were using during morphological classification or rigorously defining their algorithm for repeatability and verification of results.
 Other sources in the literature provide other potential morphological features, 
 such as the presence of jets \cite{owen_laing_1989} or hotspots towards the edges of 
 the lobes \cite{gendre_wall_2009} as well as the number of hotspots present \cite{lukic2018}.
 
 \subsection{New Classes: Beyond FRI and FRII}
-% The main problem with classification is that the possibility remains that your data isn't separable by the features you have chosen or new more detailed data starts to blur the class lines.
 Since the FR-ratio's inception, several new classes have been proposed as higher resolution catalogues have been made, such as Bent tails. Bent tails are further subdivided into Wide Angle Tails and Narrow Angle Tails. In addition to these, there are sources that seem to have hybrid morphologies, known as HyMORS \cite{gopalkrishna2000} that display qualities of an FRI in one lobe and FRII in the other. These additional classes are outside the scope of this paper, but is important to understand the complexity of the classification landscape.
-
-% \subsection{Radio Galaxy Catalogues}
-% Different definitions of FRI/FRII's have developed in the academic community. 
-% % Initially, I used the FIRST catalogue and FRICAT. However, the problem with these catalogues are that they contain compact sources within them, which completely throw off any hopes of a ratio based classification method. Compact sources are defined as unresolved sources having a single non-diffuse hot-spot \cite{lukic2018}. Part of the catalogues we currently use for FRI and FRII are FRICAT (Capetti et al. 2016) and FRIICAT (Capetti et al. 2017) , respectively. Both of these were composed from several other catalogues: NRAO VLA Sky Survey (NVSS) (Condon et al. 1998), Faint Images of the Radio Sky at Twenty Centimeters (FIRST) (Becker et al. 1995) and the Sloan Digital Survey (SDSS) (York et al. 2000).
-% FRICAT consists of 219 FRI galaxies and FRIICAT of 122 FRII galaxies. Each of the three authors of FRIICAT performed manual inspection for each source independently, after which they only included sources where at least two of them agreed that it was a FRII.
 
 \subsection{Machine Learning}
 A meta-study done by Feigelson \cite{feigelson} with regards to classification 
 methods used in astronomy found that the majority of studies used neural networks
 ($\sim150$ studies, 1990-2006), commenting that although this method is quite effective, 
 it gives ``black box'' results: difficult to reproduce and very little insight into 
-the feature space used. The majority of classifiers set up between then and now 
-have been neural networks, albeit these were the more recently developed 
-Convolutional Neural Networks (CNN) \cite{hinton_2012}. An example classifier is Toothless \footnote{\url{https://github.com/ArunAniyan/RadioGalaxyClassification}}  \cite{aniyan_thorat_2017}, with which we shall be comparing our results later on. Very few studies used 
-Bayesian classifiers (~30 studies, 1985-2006) or decision trees (~20 studies, 
+the feature space used. The majority of classifiers set up between the 1990's and 2019 
+have been neural networks, those more recently developed were
+Convolutional Neural Networks (CNN) \cite{hinton_2012}. An example classifier is Toothless \footnote{\url{https://github.com/ArunAniyan/RadioGalaxyClassification}}  \cite{aniyan_thorat_2017}, with which we shall be comparing our results later on. According to Feigelson, few studies used 
+Bayesian classifiers ($\sim30$ studies, 1985-2006) or decision trees ($\sim20$ studies, 
 1994-2006) and none used Classification and Regression Trees. Note that not all of these classifiers were set up for radio astronomy, as some of these studies focused on optical astronomy.
-
-
-
-
-
-% \subsection{Deep Learning}
-% There has been significant work done on creating Deep Learning classifiers in radio astronomy as was mentioned in the introduction, such as the Radio Galaxy Zoo project's \cite{lukic2018}
-% Looking at existing CNN's trained for classification \cite{lukic2018} and 
-% identifying the features that it is looking at will be of extreme importance. This 
-% can be done by methods such as image retrieval by scene graph grounding (Johnson et 
-% al. 2015) and visualizing of the CNN (Zeiler \& Fergus, 2014) to name a few 
-% methods.
-% The importance of feature selection is much clearer in a case such as 
-% this. Classification without explanation or feature models to back it up leaves 
-% astronomy (or in the general case the field we're applying these methods to) in a 
-% precarious position: classification might no longer coincide with actual physical 
-% characteristics of radio galaxies (or what the relevant subject matter may be).
-% potentially undoing research from data labeled by automatic classifiers that have not undergone rigorous feature selection andengineering. 
-
-
 
 \section{Methodology}
 The order of implementation was image preprocessing, manual calculation of the ratio, automatic ratio and feature extraction and then setting up classifiers given those features.
@@ -174,8 +121,7 @@ The order of implementation was image preprocessing, manual calculation of the r
 The sample selection for this study is based on the one used by Aniyan and Thorat from the Toothless classifier \cite{aniyan_thorat_2017}, with the exclusion of the Bent-tailed radio sources in their sample selection. This includes 219 FRI sources from FRICAT \cite{capetti_2016}, 71 FRI's and 464 FRII's from CoNFIG \cite{gendre_wall_2009}.
 % By visual inspection, we have found several compact sources and sources which would be classified as Bent tails. This can possibly have an influence on the quality of the model.
 \subsection{Image Processing}
-There is a high level of noise in most of the images that provides a significant hurdle for automatic classification methods, especially identifying separable lobes within the actual galaxy body. There are two parallel processing steps that are used in conjunction and this is shown in fig. \ref{fig:imagepipeline}. The first step taken is a binary threshold of the image using sigma clipping that returns a threshold of of everything above one standard deviation of the image. This covers the main body that we are interested in but still includes residual smaller bodies that are not useful. The image is labeled after thresholding by using the Scipy Label package \cite{scipy}. In order to further isolate only those bodies we are interested in, Singular Value Decomposition (SVD) is used to reconstruct the image using only the Principle Components that account for 90\% of the variance of the image. A binary threshold is then applied to this SVD reconstruction, which is then used in conjunction with the former clipped image threshold to create an image of the lobes from the original image that had been kept in the SVD reconstruction. The preprocessing method still requires statistical verification in order to assert that the technique generalises well on larger datasets. 
-% The pipeline is laid out in figure \ref{fig:imagepipeline}.
+There is a high level of noise in most of the images that provides a significant hurdle for automatic classification methods, especially identifying separable lobes within the actual galaxy body. There are two parallel processing steps that are used in conjunction and this is shown in fig. \ref{fig:imagepipeline}. The first step taken is a binary threshold of the image using sigma clipping that returns a threshold of of everything above one standard deviation of the image. This covers the main body that we are interested in but still includes residual smaller bodies that are not useful. The image is labeled after thresholding by using the Scipy Label package \cite{scipy}. In order to further isolate only those bodies we are interested in, Singular Value Decomposition (SVD) is used to reconstruct the image using only the Principle Components that account for 90\% of the variance of the image. A binary threshold is then applied to this SVD reconstruction, which is then used in conjunction with the former clipped image threshold to create an image of the lobes from the original image that had been kept in the SVD reconstruction. The preprocessing method still requires statistical verification in order to assert that the technique generalises well on larger datasets.
 
 \begin{figure*}[h]
     \centering
@@ -185,15 +131,13 @@ There is a high level of noise in most of the images that provides a significant
 \end{figure*}
 
 \subsection{Image Segmentation}
-According to Fanaroff and Riley's original paper on the matter, the ratio can be calculated by taking the distance between the two brightest areas on the lobes, either side of the AGN, and dividing that by the total distance between the furthest contour of the edges on either side (i.e. more or less in line with the line between the brightest hotspots).
+According to Fanaroff and Riley, the ratio can be calculated by taking the distance between the two brightest areas on the lobes, either side of the AGN, and dividing that by the total distance between the furthest contour of the edges on either side (i.e. more or less in line with the line between the brightest hotspots).
 
 Machine learning is useful in the preprocessing of the data as well, especially when certain semantic distinctions are needed to be made without much prior knowledge of these class distinctions. In order to determine the relative positions of hotspots to the lobe edges, an unsupervised method is required to cluster the image into three main semantic categories: background, lobes and hotspots. The need for an unsupervised algorithm arises from the differences in radio luminosity between classes and within classes if sources are from different catalogues.
-% The main issue arising with this is separating the background and the source in question.
-% Segmentation is one way of isolating the parts of the image that we are interested in. 
+ 
 Well established machine learning methods such as the k-means 
 algorithm \cite{macqueen1967} can be useful ways to 
 cluster these pixels into the three categories we have discussed and to start the automatic feature extraction process. We have made use of the Scikit-Learn implementation of k-means \cite{scikit-learn}. 
-% The k-means algorithm can be made more efficient by choosing the initial cluster positions intelligently (Bradley et al. 1998).
 
 The technique we developed for manual classification involves visually inspecting the image under at least two different colour maps, inspecting its k-means segmented version, starting at 3 clusters and then increasing the number of clusters if higher levels of detail is required. Finally, a method of blocking out the 10 brightest pixels at a time was used. Once there is a blocked out pixel that is separate from the rest, one can safely assume that you have found a hotspot (best method). This method does make some assumptions, such as that the AGN lobe will always be the brightest and not one of the side lobes.
 
@@ -373,61 +317,18 @@ The ratio in itself is not a class distinguishing feature on its own and should 
 Hotspot brightness and lobe area are the two features that contribute the most in fig. \ref{fig:gini}, but are subjective features that do not directly relate to objective measurements in a consistent manner. Both are dependant on the radio telescope's resolution and should be used as features or comparison metrics only if this is taken into account. These subjective features can easily become the dominant features in small datasets such as ours. The possibility exists that the features that deep learning models learn are subjective features, which might not translate well to sources found by the next generation of radio surveys.
 
 The results from our conventional classifier is comparable to the results from convolutional neural networks and shows that there is significant room to make use of conventional feature engineering based approaches towards radio galaxy classification. 
-% The computational resources required for this would be significantly lower than what is required for a comparable CNN, in terms of training the model and setting up a running version.
-
-% Since we expect a massive influx of data, we need to consider the time it would take to retrain the model. 
 
 In conclusion, a conventional machine learning approach has merit for a problem such as this one, which might be labeled as a medium complexity issue in morphological classification, due to the lack of highly complex visual features (such as the case in scene identification or animal classification). 
-% Using methods such as a CNN for a case where the feature space is already well mapped out is a grievous misuse of computational resources for where conventional methods can deliver similar and even slightly better results. 
 
 The benefits of the conventional approach is shorter training time, with less risk of overfitting the model, shorter time requirement to retrain on new data and more knowledge of feature importance during classification.
 
-The limitations of this model is that the features have to be modeled and extracted.
+The limitations of this model is that the features have to be modeled and extracted and the current preprocessing method using SVD is not scalable to Big Datasets.
 
 \section{Future Work}
 
 Converting some of the subjective features to objective features is work that should be examined in more depth, such as extracting the ratio of the source area to a bounding box around it. Calculating the flux density of a source and then comparing this with optical luminosity might be one way to make the brightness an objective measure.
-% , which could build on the classification system proposed by Owen and Ledlow \cite{owen_1994}.
 
 A speed and computational resource use comparison between the conventional and deep learning classifiers is necessary in order to evaluate the cost effectiveness of using these classifiers in practise. Evaluating their performance and assessing the need for specialised hardware is important for large scale projects such as the SKA.
-
-% Future work on this project would include setting up a deep learning model with augmentation techniques (scaling and rotation) that are different than the ones used by Aniyan and Thorat \cite{aniyan_thorat_2017} and that use the features extracted, such as the line of best fit.
-
-% Other alternatives using an automatic machine learning package such as Auto-Keras to see what neural architecture it finds to be an optimal fit and compare this to the existing CNN's would be a useful exercise.
-
-% Deep learning visualisation methods are one way of developing a more intuitive understanding of what each layer is looking at and how that convolves into the final classification given.
-
-% Exploring capsule networks is also critical if a broad comparison is required to asses all possible opportunities, due to the potential these networks show with such problems.
-
-
-
-% Examining the possibility of using optical luminosity and radio luminosity as features in a classification system would require optical catalogues being correlated with radio catalogues. In light of recent developments regarding wide-field optical telescopes such as MeerLICHT and BlackGEM \cite{meerlicht} that will make optical observations of the same area that MeerKAT will be observing in the radio spectrum, this can potentially become a viable metric of classification that is much less subjective than morphology.
-
-% \begin{table*}[h]
-%   \caption{Effect on Class Accuracy by varying the Ratio on the 72 FRI's and 78 FRII's which were manually classified}
-%   \label{tab:freq}
-% \begin{center}
-% \begin{tabular}{|l|l|l|l|l|}
-%     \hline
-%         Ratio & Number of FRI Correct &  Number of FRII Correct & FRI Accuracy & FRII Accuracy \\
-%         \hline
-%         0.29 & 46 & 59 & 0.6388 & 0.7662 \\
-%         \hline
-%         0.3 & 47 & 57 & 0.6527 & 0.7402 \\
-%         \hline
-%         0.31 & 51 & 55 & 0.7083 & 0.7142 \\
-%         \hline
-%         \textbf{0.311} & \textbf{52} & \textbf{54} & \textbf{0.7222} & \textbf{0.7012} \\
-%         \hline
-%         0.35 & 54 & 44 & 0.75 & 0.5714 \\
-%         \hline
-%         0.4 & 63 & 39 & 0.875 & 0.5064 \\
-%         \hline
-%         0.5 & 68 & 20 & 0.9444 & 0.2597 \\
-%     \hline
-% \end{tabular}
-% \end{center}
-% \end{table*}
 
 \section*{Acknowledgment}
 

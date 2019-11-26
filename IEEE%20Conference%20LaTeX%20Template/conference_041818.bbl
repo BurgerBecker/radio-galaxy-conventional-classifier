@@ -22,18 +22,18 @@
 \BIBdecl
 
 \bibitem{jonas_2018}
-J.~Jonas and {The MeerKAT Team}, ``The meerkat radio telescope,''
+J.~Jonas and {The MeerKAT Team}, ``The MeerKAT radio telescope,''
   \emph{Proceedings of MeerKAT Science: On the Pathway to the SKA -
   PoS(MeerKAT2016)}, Jan 2018.
 
 \bibitem{askap_2008}
-F.~{Johnston, S.} and {Gupta, N.}, ``Science with the australian square
-  kilometre array pathfinder (askap),'' \emph{The Low-Frequency Radio Universe
+F.~{Johnston, S.} and {Gupta, N.}, ``Science with the Australian Square
+  Kilometre Array Pathfinder (ASKAP),'' \emph{The Low-Frequency Radio Universe
   ASP Conference Series}, vol. 407, p. 446, 2008.
 
 \bibitem{emu_2011}
 {Norris, Ray P.}, {Hopkins, A. M.}, {Afonso, J.}, and {Brown, S.}, ``Emu:
-  Evolutionary map of the universe,'' \emph{Publications of the Astronomical
+  Evolutionary Map of the Universe,'' \emph{Publications of the Astronomical
   Society of Australia}, vol.~28, no.~3, p. 215–248, 2011.
 
 \bibitem{hocking_2015}
@@ -46,13 +46,13 @@ A.~{Hocking}, J.~E. {Geach}, N.~{Davey}, and Y.~{Sun}, ``Teaching a machine to
 \BIBentrySTDinterwordspacing
 
 \bibitem{aniyan_thorat_2017}
-A.~K. Aniyan and K.~Thorat, ``Classifying radio galaxies with the convolutional
-  neural network,'' \emph{The Astrophysical Journal Supplement Series}, vol.
+A.~K. Aniyan and K.~Thorat, ``Classifying Radio Galaxies with the Convolutional
+  Neural Network,'' \emph{The Astrophysical Journal Supplement Series}, vol.
   230, no.~2, p.~20, 2017.
 
 \bibitem{alhassan_2018}
-W.~Alhassan, ``The first classifier: compact and extended radio galaxy
-  classification using deep convolutional neural networks,'' \emph{Monthly
+W.~Alhassan, ``The FIRST Classifier: Compact and Extended Radio Galaxy
+  Classification using Deep Convolutional Neural Networks,'' \emph{Monthly
   Notices of the Royal Astronomical Society}, vol. 480, no.~2, p. 2085–2093,
   Oct 2018.
 
@@ -61,7 +61,7 @@ W.~Alhassan, ``The first classifier: compact and extended radio galaxy
 C.~Wu, O.~I. Wong, L.~Rudnick, S.~S. Shabala, M.~J. Alger, J.~K. Banfield,
   C.~S. Ong, S.~V. White, A.~F. Garon, R.~P. Norris, H.~Andernach, J.~Tate,
   V.~Lukic, H.~Tang, K.~Schawinski, and F.~I. Diakogiannis, ``{Radio Galaxy
-  Zoo: Claran – a deep learning classifier for radio morphologies},''
+  Zoo: CLARAN – a deep learning classifier for radio morphologies},''
   \emph{Monthly Notices of the Royal Astronomical Society}, vol. 482, no.~1,
   pp. 1211--1230, 10 2018. [Online]. Available:
   \url{https://doi.org/10.1093/mnras/sty2646}
@@ -70,45 +70,45 @@ C.~Wu, O.~I. Wong, L.~Rudnick, S.~S. Shabala, M.~J. Alger, J.~K. Banfield,
 \bibitem{lukic_2019}
 \BIBentryALTinterwordspacing
 V.~Lukic, M.~Brüggen, B.~Mingo, J.~H. Croston, G.~Kasieczka, and P.~N. Best,
-  ``{Morphological classification of radio galaxies: capsule networks versus
-  convolutional neural networks},'' \emph{Monthly Notices of the Royal
+  ``{Morphological Classification of Radio Galaxies: Capsule Networks versus
+  Convolutional Neural Networks},'' \emph{Monthly Notices of the Royal
   Astronomical Society}, vol. 487, no.~2, pp. 1729--1744, 05 2019. [Online].
   Available: \url{https://doi.org/10.1093/mnras/stz1289}
 \BIBentrySTDinterwordspacing
 
 \bibitem{kharb2015}
 P.~{Kharb}, E.~{Stanley}, M.~{Lister}, H.~{Marshall}, C.~{O'Dea}, and
-  S.~{Baum}, ``{Understanding jets from sources straddling the Fanaroff-Riley
-  divide},'' in \emph{Extragalactic Jets from Every Angle}, ser. IAU Symposium,
+  S.~{Baum}, ``{Understanding Jets from Sources Straddling the Fanaroff-Riley
+  Divide},'' in \emph{Extragalactic Jets from Every Angle}, ser. IAU Symposium,
   F.~{Massaro}, C.~C. {Cheung}, E.~{Lopez}, and A.~{Siemiginowska}, Eds., vol.
   313, Mar 2015, pp. 211--218.
 
 \bibitem{fanaroff_riley_1974}
-B.~L. Fanaroff and J.~M. Riley, ``The morphology of extragalactic radio sources
-  of high and low luminosity,'' \emph{Monthly Notices of the Royal Astronomical
+B.~L. Fanaroff and J.~M. Riley, ``The Morphology of Extragalactic Radio Sources
+  of High and Low Luminosity,'' \emph{Monthly Notices of the Royal Astronomical
   Society}, vol. 167, no.~1, Jan 1974.
 
 \bibitem{wierzbowska_2011}
-{Kozie\l{}-Wierzbowska, D.} and {Stasi\'{n}ska, G.}, ``Frii radio galaxies in
-  the sloan digital sky survey: Observational facts,'' \emph{Monthly Notices of
+{Kozie\l{}-Wierzbowska, D.} and {Stasi\'{n}ska, G.}, ``FRII Radio Galaxies in
+  the Sloan Digital Sky Survey: Observational Facts,'' \emph{Monthly Notices of
   the Royal Astronomical Society}, vol. 415, no.~2, pp. 1013--1026, 2011.
 
 \bibitem{lin_2010}
 {Lin, Yen-Ting}, {Shen, Yue}, {Strauss, Michael A.}, {Richards, Gordon T.}, and
   {Lunnan, Ragnhild}, ``On the populations of radio galaxies with extended
-  morphology atz< 0.3,'' \emph{The Astrophysical Journal}, vol. 723, no.~2, p.
+  morphology at $z < 0.3$,'' \emph{The Astrophysical Journal}, vol. 723, no.~2, p.
   1119–1138, 2010.
 
 \bibitem{owen_laing_1989}
-F.~N. Owen and R.~A. Laing, ``Ccd surface photometry of radio galaxies - i. fr
-  class i and ii sources,'' \emph{Monthly Notices of the Royal Astronomical
+F.~N. Owen and R.~A. Laing, ``CCD surface photometry of radio galaxies - I. FR
+  class I and II sources,'' \emph{Monthly Notices of the Royal Astronomical
   Society}, vol. 238, no.~2, p. 357–378, Jan 1989.
 
 \bibitem{gendre_wall_2009}
-M.~A. Gendre and J.~V. Wall, ``Erratum: The combined nvss-first galaxies
-  (config) sample - i. sample definition, classification and evolution,''
+M.~A. Gendre and J.~V. Wall, ``Erratum: The Combined NVSS-FIRST Galaxies
+  (CoNFIG) sample - I. Sample definition, classification and evolution,''
   \emph{Monthly Notices of the Royal Astronomical Society}, vol. 394, no.~3, p.
-  1712–1712, Nov 2009.
+  1712, April 2009.
 
 \bibitem{lukic2018}
 V.~Lukic, M.~Brüggen, J.~K. Banfield, O.~I. Wong, L.~Rudnick, R.~P. Norris,
@@ -117,24 +117,24 @@ V.~Lukic, M.~Brüggen, J.~K. Banfield, O.~I. Wong, L.~Rudnick, R.~P. Norris,
   Astronomical Society}, vol. 476, no.~1, p. 246–260, 2018.
 
 \bibitem{gopalkrishna2000}
-{Gopal-Krishna} and {Wiita, P.J.}, ``Extragalactic radio sources with hybrid
-  morphology: implications for the fanaroff-riley dichotomy,'' \emph{Astronomy
+{Gopal-Krishna} and {Wiita, P.J.}, ``Extragalactic radio sources with Hybrid
+  Morphology: Implications for the Fanaroff-Riley dichotomy,'' \emph{Astronomy
   and Astrophysics}, vol. 363, pp. 507--516, 2000.
 
 \bibitem{feigelson}
-E.~D. Feigelson, \emph{Statistical Challenges in Astronomy}.\hskip 1em plus
-  0.5em minus 0.4em\relax ``Springer'', 2003.
+E.~D. Feigelson, \emph{Statistical Challenges in Modern Astronomy IV}.\hskip 1em plus
+  0.5em minus 0.4em\relax ``Springer'', 2007.
 
 \bibitem{hinton_2012}
 G.~Hinton, L.~Deng, D.~Yu, G.~Dahl, A.-R. Mohamed, N.~Jaitly, A.~Senior,
-  V.~Vanhoucke, P.~Nguyen, T.~Sainath, and et~al., ``Deep neural networks for
+  V.~Vanhoucke, P.~Nguyen, T.~Sainath, and et~al., ``Deep Neural Networks for
   acoustic modeling in speech recognition: The shared views of four research
   groups,'' \emph{IEEE Signal Processing Magazine}, vol.~29, no.~6, p. 82–97,
   2012.
 
 \bibitem{capetti_2016}
 \BIBentryALTinterwordspacing
-A.~{Capetti}, F.~{Massaro}, and R.~{Baldi}, ``Fricat: A first catalog of fr i
+A.~{Capetti}, F.~{Massaro}, and R.~{Baldi}, ``FRICAT: A FIRST catalog of FRI
   radio galaxies,'' \emph{Astronomy and Astrophysics}, vol. 598, p. A49, 2017.
   [Online]. Available: \url{https://doi.org/10.1051/0004-6361/201629287}
 \BIBentrySTDinterwordspacing

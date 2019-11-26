@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.3.20)  3 SEP 2019 21:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.3.20)  24 NOV 2019 12:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -23,7 +23,7 @@ LaTeX Font Info:    Try loading font information for OT1+ptm on input line 503.
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 -- Using 8.5in x 11in (letter) paper.
--- Using DVI output.
+-- Using PDF output.
 \@IEEEnormalsizeunitybaselineskip=\dimen105
 -- This is a 10 point document.
 \CLASSINFOnormalsizebaselineskip=\dimen106
@@ -217,10 +217,10 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: dvips.def on input line 99.
+Package graphics Info: Driver file: pdftex.def on input line 99.
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/dvips.def
-File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen135
 \Gin@req@width=\dimen136
@@ -313,8 +313,9 @@ Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: dvips.def on input line 225.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
@@ -374,116 +375,448 @@ File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    ... okay on input line 16.
 
 -- Lines per column: 56 (exact).
-LaTeX Font Info:    Try loading font information for U+msa on input line 47.
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count112
+\scratchdimen=\dimen141
+\scratchbox=\box36
+\nofMPsegments=\count113
+\nofMParguments=\count114
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count115
+\MPscratchDim=\dimen142
+\MPnumerator=\count116
+\makeMPintoPDFobject=\count117
+\everyMPtoPDFconversion=\toks24
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Try loading font information for U+msa on input line 46.
+
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 47.
+LaTeX Font Info:    Try loading font information for U+msb on input line 46.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-File: EPS/kharb2015.eps Graphic file (type eps)
- <EPS/kharb2015.eps>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 56--57
+Package epstopdf Info: Source file: <EPS/kharb2015.eps>
+(epstopdf)                    date: 2019-09-03 17:51:45
+(epstopdf)                    size: 1183387 bytes
+(epstopdf)             Output file: <EPS/kharb2015-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=EPS/kharb2015-eps-converte
+d-to.pdf EPS/kharb2015.eps>
+(epstopdf)             \includegraphics on input line 55.
+runsystem(repstopdf --outfile=EPS/kharb2015-eps-converted-to.pdf EPS/kharb2015.
+eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <EPS/kharb2015-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-11-24 12:51:55
+(epstopdf)                    size: 423837 bytes.
+
+
+pdfTeX warning: pdflatex (file ./EPS/kharb2015-eps-converted-to.pdf): PDF inclu
+sion: found PDF version <1.7>, but at most version <1.5> allowed
+<EPS/kharb2015-eps-converted-to.pdf, id=1, 951.555pt x 743.77875pt>
+File: EPS/kharb2015-eps-converted-to.pdf Graphic file (type pdf)
+<use EPS/kharb2015-eps-converted-to.pdf>
+Package pdftex.def Info: EPS/kharb2015-eps-converted-to.pdf  used on input line
+ 55.
+(pdftex.def)             Requested size: 258.0pt x 201.66278pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 55--56
  [][] 
  []
 
-[1
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-]
-File: EPS/ratio_becker.eps Graphic file (type eps)
- <EPS/ratio_becker.eps>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 105--106
+Underfull \vbox (badness 4120) has occurred while \output is active []
+
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+ <./EPS/kharb2015-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <EPS/ratio_becker.eps>
+(epstopdf)                    date: 2019-09-03 18:01:35
+(epstopdf)                    size: 5258 bytes
+(epstopdf)             Output file: <EPS/ratio_becker-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=EPS/ratio_becker-eps-conve
+rted-to.pdf EPS/ratio_becker.eps>
+(epstopdf)             \includegraphics on input line 90.
+runsystem(repstopdf --outfile=EPS/ratio_becker-eps-converted-to.pdf EPS/ratio_b
+ecker.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <EPS/ratio_becker-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-11-24 12:51:55
+(epstopdf)                    size: 5190 bytes.
+
+
+pdfTeX warning: pdflatex (file ./EPS/ratio_becker-eps-converted-to.pdf): PDF in
+clusion: found PDF version <1.7>, but at most version <1.5> allowed
+<EPS/ratio_becker-eps-converted-to.pdf, id=16, 261.97874pt x 99.37125pt>
+File: EPS/ratio_becker-eps-converted-to.pdf Graphic file (type pdf)
+<use EPS/ratio_becker-eps-converted-to.pdf>
+Package pdftex.def Info: EPS/ratio_becker-eps-converted-to.pdf  used on input l
+ine 90.
+(pdftex.def)             Requested size: 258.0pt x 97.86533pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 90--91
  [][] 
  []
 
-[2]
-File: EPS/pipelines.eps Graphic file (type eps)
- <EPS/pipelines.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2 <./EPS/ratio_becker-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <EPS/pipelines.eps>
+(epstopdf)                    date: 2019-09-03 17:58:39
+(epstopdf)                    size: 157212 bytes
+(epstopdf)             Output file: <EPS/pipelines-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=EPS/pipelines-eps-converte
+d-to.pdf EPS/pipelines.eps>
+(epstopdf)             \includegraphics on input line 128.
+runsystem(repstopdf --outfile=EPS/pipelines-eps-converted-to.pdf EPS/pipelines.
+eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <EPS/pipelines-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-11-24 12:51:55
+(epstopdf)                    size: 127144 bytes.
+
+
+pdfTeX warning: pdflatex (file ./EPS/pipelines-eps-converted-to.pdf): PDF inclu
+sion: found PDF version <1.7>, but at most version <1.5> allowed
+<EPS/pipelines-eps-converted-to.pdf, id=25, 683.55376pt x 439.6425pt>
+File: EPS/pipelines-eps-converted-to.pdf Graphic file (type pdf)
+<use EPS/pipelines-eps-converted-to.pdf>
+Package pdftex.def Info: EPS/pipelines-eps-converted-to.pdf  used on input line
+ 128.
+(pdftex.def)             Requested size: 341.77605pt x 219.82071pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [3]
-File: EPS/hotspots.eps Graphic file (type eps)
- <EPS/hotspots.eps>
-File: EPS/findingfurthestpoint.eps Graphic file (type eps)
- <EPS/findingfurthestpoint.eps>
-File: EPS/ratioauto.eps Graphic file (type eps)
- <EPS/ratioauto.eps>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 225--228
+Package epstopdf Info: Source file: <EPS/hotspots.eps>
+(epstopdf)                    date: 2019-09-03 17:51:14
+(epstopdf)                    size: 7825 bytes
+(epstopdf)             Output file: <EPS/hotspots-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=EPS/hotspots-eps-converted
+-to.pdf EPS/hotspots.eps>
+(epstopdf)             \includegraphics on input line 161.
+runsystem(repstopdf --outfile=EPS/hotspots-eps-converted-to.pdf EPS/hotspots.ep
+s)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <EPS/hotspots-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-11-24 12:51:55
+(epstopdf)                    size: 7540 bytes.
+
+
+pdfTeX warning: pdflatex (file ./EPS/hotspots-eps-converted-to.pdf): PDF inclus
+ion: found PDF version <1.7>, but at most version <1.5> allowed
+<EPS/hotspots-eps-converted-to.pdf, id=29, 385.44pt x 160.6pt>
+File: EPS/hotspots-eps-converted-to.pdf Graphic file (type pdf)
+<use EPS/hotspots-eps-converted-to.pdf>
+Package pdftex.def Info: EPS/hotspots-eps-converted-to.pdf  used on input line 
+161.
+(pdftex.def)             Requested size: 258.0pt x 107.4985pt.
+Package epstopdf Info: Source file: <EPS/findingfurthestpoint.eps>
+(epstopdf)                    date: 2019-09-03 17:50:18
+(epstopdf)                    size: 13737 bytes
+(epstopdf)             Output file: <EPS/findingfurthestpoint-eps-converted-to.
+pdf>
+(epstopdf)             Command: <repstopdf --outfile=EPS/findingfurthestpoint-e
+ps-converted-to.pdf EPS/findingfurthestpoint.eps>
+(epstopdf)             \includegraphics on input line 162.
+runsystem(repstopdf --outfile=EPS/findingfurthestpoint-eps-converted-to.pdf EPS
+/findingfurthestpoint.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <EPS/findingfurthestpoint-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2019-11-24 12:51:56
+(epstopdf)                    size: 13659 bytes.
+
+
+pdfTeX warning: pdflatex (file ./EPS/findingfurthestpoint-eps-converted-to.pdf)
+: PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<EPS/findingfurthestpoint-eps-converted-to.pdf, id=30, 385.44pt x 160.6pt>
+File: EPS/findingfurthestpoint-eps-converted-to.pdf Graphic file (type pdf)
+<use EPS/findingfurthestpoint-eps-converted-to.pdf>
+Package pdftex.def Info: EPS/findingfurthestpoint-eps-converted-to.pdf  used on
+ input line 162.
+(pdftex.def)             Requested size: 258.0pt x 107.4985pt.
+Package epstopdf Info: Source file: <EPS/ratioauto.eps>
+(epstopdf)                    date: 2019-09-03 17:59:26
+(epstopdf)                    size: 10690 bytes
+(epstopdf)             Output file: <EPS/ratioauto-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=EPS/ratioauto-eps-converte
+d-to.pdf EPS/ratioauto.eps>
+(epstopdf)             \includegraphics on input line 163.
+runsystem(repstopdf --outfile=EPS/ratioauto-eps-converted-to.pdf EPS/ratioauto.
+eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <EPS/ratioauto-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-11-24 12:51:56
+(epstopdf)                    size: 10092 bytes.
+
+
+pdfTeX warning: pdflatex (file ./EPS/ratioauto-eps-converted-to.pdf): PDF inclu
+sion: found PDF version <1.7>, but at most version <1.5> allowed
+<EPS/ratioauto-eps-converted-to.pdf, id=31, 385.44pt x 160.6pt>
+File: EPS/ratioauto-eps-converted-to.pdf Graphic file (type pdf)
+<use EPS/ratioauto-eps-converted-to.pdf>
+Package pdftex.def Info: EPS/ratioauto-eps-converted-to.pdf  used on input line
+ 163.
+(pdftex.def)             Requested size: 258.0pt x 107.4985pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 161--164
  [][] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 225--228
+Overfull \hbox (6.0pt too wide) in paragraph at lines 161--164
  [] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 225--228
+Overfull \hbox (6.0pt too wide) in paragraph at lines 161--164
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[4]
+[4 <./EPS/pipelines-eps-converted-to.pdf> <./EPS/hotspots-eps-converted-to.pdf>
+ <./EPS/findingfurthestpoint-eps-converted-to.pdf> <./EPS/ratioauto-eps-convert
+ed-to.pdf>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-File: EPS/ratio.eps Graphic file (type eps)
-<EPS/ratio.eps>
-File: EPS/feature_import.eps Graphic file (type eps)
- <EPS/feature_import.eps>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 309--310
+Package epstopdf Info: Source file: <EPS/ratio.eps>
+(epstopdf)                    date: 2019-09-03 17:59:06
+(epstopdf)                    size: 58169 bytes
+(epstopdf)             Output file: <EPS/ratio-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=EPS/ratio-eps-converted-to
+.pdf EPS/ratio.eps>
+(epstopdf)             \includegraphics on input line 236.
+runsystem(repstopdf --outfile=EPS/ratio-eps-converted-to.pdf EPS/ratio.eps)...e
+xecuted safely (allowed).
+
+Package epstopdf Info: Result file: <EPS/ratio-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-11-24 12:51:56
+(epstopdf)                    size: 61536 bytes.
+
+
+pdfTeX warning: pdflatex (file ./EPS/ratio-eps-converted-to.pdf): PDF inclusion
+: found PDF version <1.7>, but at most version <1.5> allowed
+<EPS/ratio-eps-converted-to.pdf, id=47, 210.7875pt x 174.6525pt>
+File: EPS/ratio-eps-converted-to.pdf Graphic file (type pdf)
+<use EPS/ratio-eps-converted-to.pdf>
+Package pdftex.def Info: EPS/ratio-eps-converted-to.pdf  used on input line 236
+.
+(pdftex.def)             Requested size: 154.80157pt x 128.26544pt.
+Package epstopdf Info: Source file: <EPS/feature_import.eps>
+(epstopdf)                    date: 2019-09-03 18:03:18
+(epstopdf)                    size: 14802 bytes
+(epstopdf)             Output file: <EPS/feature_import-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=EPS/feature_import-eps-con
+verted-to.pdf EPS/feature_import.eps>
+(epstopdf)             \includegraphics on input line 245.
+runsystem(repstopdf --outfile=EPS/feature_import-eps-converted-to.pdf EPS/featu
+re_import.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <EPS/feature_import-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-11-24 12:51:56
+(epstopdf)                    size: 13374 bytes.
+
+
+pdfTeX warning: pdflatex (file ./EPS/feature_import-eps-converted-to.pdf): PDF 
+inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<EPS/feature_import-eps-converted-to.pdf, id=48, 457.71pt x 279.0425pt>
+File: EPS/feature_import-eps-converted-to.pdf Graphic file (type pdf)
+<use EPS/feature_import-eps-converted-to.pdf>
+Package pdftex.def Info: EPS/feature_import-eps-converted-to.pdf  used on input
+ line 245.
+(pdftex.def)             Requested size: 258.0pt x 157.29312pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 245--246
  [][] 
  []
 
-File: EPS/ee.eps Graphic file (type eps)
-<EPS/ee.eps>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 316--317
+Package epstopdf Info: Source file: <EPS/ee.eps>
+(epstopdf)                    date: 2019-09-03 17:46:57
+(epstopdf)                    size: 206570 bytes
+(epstopdf)             Output file: <EPS/ee-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=EPS/ee-eps-converted-to.pd
+f EPS/ee.eps>
+(epstopdf)             \includegraphics on input line 252.
+runsystem(repstopdf --outfile=EPS/ee-eps-converted-to.pdf EPS/ee.eps)...execute
+d safely (allowed).
+
+Package epstopdf Info: Result file: <EPS/ee-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-11-24 12:51:57
+(epstopdf)                    size: 207510 bytes.
+
+
+pdfTeX warning: pdflatex (file ./EPS/ee-eps-converted-to.pdf): PDF inclusion: f
+ound PDF version <1.7>, but at most version <1.5> allowed
+<EPS/ee-eps-converted-to.pdf, id=49, 507.8975pt x 304.13625pt>
+File: EPS/ee-eps-converted-to.pdf Graphic file (type pdf)
+<use EPS/ee-eps-converted-to.pdf>
+Package pdftex.def Info: EPS/ee-eps-converted-to.pdf  used on input line 252.
+(pdftex.def)             Requested size: 258.0pt x 154.4995pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 252--253
  [][] 
  []
 
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 321.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 257.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [5]
-File: EPS/agnfeat.eps Graphic file (type eps)
+) [5 <./EPS/ratio-eps-converted-to.pdf> <./EPS/feature_import-eps-converted-to.
+pdf>]
+Package epstopdf Info: Source file: <EPS/agnfeat.eps>
+(epstopdf)                    date: 2019-09-03 17:48:19
+(epstopdf)                    size: 16166 bytes
+(epstopdf)             Output file: <EPS/agnfeat-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=EPS/agnfeat-eps-converted-
+to.pdf EPS/agnfeat.eps>
+(epstopdf)             \includegraphics on input line 270.
+runsystem(repstopdf --outfile=EPS/agnfeat-eps-converted-to.pdf EPS/agnfeat.eps)
+...executed safely (allowed).
 
-<EPS/agnfeat.eps>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 334--335
+Package epstopdf Info: Result file: <EPS/agnfeat-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-11-24 12:51:57
+(epstopdf)                    size: 14373 bytes.
+
+
+pdfTeX warning: pdflatex (file ./EPS/agnfeat-eps-converted-to.pdf): PDF inclusi
+on: found PDF version <1.7>, but at most version <1.5> allowed
+<EPS/agnfeat-eps-converted-to.pdf, id=60, 463.7325pt x 279.0425pt>
+File: EPS/agnfeat-eps-converted-to.pdf Graphic file (type pdf)
+<use EPS/agnfeat-eps-converted-to.pdf>
+Package pdftex.def Info: EPS/agnfeat-eps-converted-to.pdf  used on input line 2
+70.
+(pdftex.def)             Requested size: 258.0pt x 155.24936pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 270--271
  [][] 
  []
 
+Package epstopdf Info: Source file: <EPS/nestedlast.eps>
+(epstopdf)                    date: 2019-09-03 17:57:39
+(epstopdf)                    size: 22328 bytes
+(epstopdf)             Output file: <EPS/nestedlast-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=EPS/nestedlast-eps-convert
+ed-to.pdf EPS/nestedlast.eps>
+(epstopdf)             \includegraphics on input line 276.
+runsystem(repstopdf --outfile=EPS/nestedlast-eps-converted-to.pdf EPS/nestedlas
+t.eps)...executed safely (allowed).
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Package epstopdf Info: Result file: <EPS/nestedlast-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-11-24 12:51:57
+(epstopdf)                    size: 21107 bytes.
 
-File: EPS/nestedlast.eps Graphic file (type eps)
-<EPS/nestedlast.eps>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 340--341
+
+pdfTeX warning: pdflatex (file ./EPS/nestedlast-eps-converted-to.pdf): PDF incl
+usion: found PDF version <1.7>, but at most version <1.5> allowed
+<EPS/nestedlast-eps-converted-to.pdf, id=61, 416.55624pt x 266.9975pt>
+File: EPS/nestedlast-eps-converted-to.pdf Graphic file (type pdf)
+<use EPS/nestedlast-eps-converted-to.pdf>
+Package pdftex.def Info: EPS/nestedlast-eps-converted-to.pdf  used on input lin
+e 276.
+(pdftex.def)             Requested size: 258.0pt x 165.37784pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 276--277
  [][] 
  []
 
+Package epstopdf Info: Source file: <EPS/pairwise.eps>
+(epstopdf)                    date: 2019-09-03 17:58:07
+(epstopdf)                    size: 424795 bytes
+(epstopdf)             Output file: <EPS/pairwise-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=EPS/pairwise-eps-converted
+-to.pdf EPS/pairwise.eps>
+(epstopdf)             \includegraphics on input line 283.
+runsystem(repstopdf --outfile=EPS/pairwise-eps-converted-to.pdf EPS/pairwise.ep
+s)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <EPS/pairwise-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-11-24 12:51:58
+(epstopdf)                    size: 429270 bytes.
+
+
+pdfTeX warning: pdflatex (file ./EPS/pairwise-eps-converted-to.pdf): PDF inclus
+ion: found PDF version <1.7>, but at most version <1.5> allowed
+<EPS/pairwise-eps-converted-to.pdf, id=62, 769.87625pt x 712.6625pt>
+File: EPS/pairwise-eps-converted-to.pdf Graphic file (type pdf)
+<use EPS/pairwise-eps-converted-to.pdf>
+Package pdftex.def Info: EPS/pairwise-eps-converted-to.pdf  used on input line 
+283.
+(pdftex.def)             Requested size: 516.0pt x 477.68802pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-File: EPS/pairwise.eps Graphic file (type eps)
-<EPS/pairwise.eps>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[6]
-Underfull \vbox (badness 2293) has occurred while \output is active []
-
-
+[6 <./EPS/ee-eps-converted-to.pdf> <./EPS/agnfeat-eps-converted-to.pdf> <./EPS/
+nestedlast-eps-converted-to.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7]
-(./conference_041818.bbl
+ [7 <./EPS/pairwise-eps-converted-to.pdf>] (./conference_041818.bbl
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
@@ -495,9 +828,6 @@ Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
@@ -525,18 +855,34 @@ Before submitting the final camera ready copy, remember to:
  process uses the appropriate paper size.
 
 - LAST -
-Extra skip:21.6679pt
+Extra skip:72.6679pt
 Left:672.0pt/0.0pt
-Right:579.0pt/1.73193pt
-Output:557.06587pt
+Right:624.0pt/1.73193pt
+Output:662.56587pt
 [8] (./conference_041818.aux) ) 
 Here is how much of TeX's memory you used:
- 4063 strings out of 492982
- 57600 string characters out of 6134896
- 163381 words of memory out of 5000000
- 7588 multiletter control sequences out of 15000+600000
- 31524 words of font info for 78 fonts, out of 8000000 for 9000
+ 4956 strings out of 492982
+ 72739 string characters out of 6134896
+ 182612 words of memory out of 5000000
+ 8423 multiletter control sequences out of 15000+600000
+ 44951 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,8n,35p,1327b,291s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,8n,35p,1327b,291s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/b
+ase/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi
+8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on conference_041818.pdf (8 pages, 1456655 bytes).
+PDF statistics:
+ 124 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on conference_041818.dvi (8 pages, 49592 bytes).
